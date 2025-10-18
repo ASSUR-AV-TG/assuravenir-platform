@@ -1,19 +1,15 @@
-# AssurAvenir — Plateforme Apprenant
+# LES INDISPENSABLES
 
-Prototype Next.js + Tailwind + NextAuth + Prisma(Postgres) + Stripe
-Includes admin page, student dashboard, checkout webhook.
+Projet Next.js + Tailwind + NextAuth + Prisma(Postgres) + Stripe
 
-## Setup (local)
-
-1. Copy `.env.example` to `.env` and fill values (DATABASE_URL, NEXTAUTH_SECRET, STRIPE keys).
-2. Install: `npm install`
-3. Generate Prisma client and run migrations:
+## Setup local
+1. Copier `.env.example` → `.env` et remplir les valeurs
+2. Installer les dépendances : `npm install`
+3. Générer Prisma client et migrations :
    - `npx prisma generate`
    - `npx prisma migrate dev --name init`
-4. Run dev: `npm run dev`
-5. To test Stripe webhooks locally: `stripe listen --forward-to localhost:3000/api/stripe/webhook`
+4. Lancer le projet : `npm run dev`
 
-## Deploy
-Recommended: Vercel (frontend + API routes). Use managed Postgres (Railway, Supabase, Neon).
-Set environment variables in the deployment dashboard.
-
+## Deployment
+- Sur Vercel, importer le repo GitHub
+- Ajouter les variables d’environnement sur Vercel
